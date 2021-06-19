@@ -69,7 +69,7 @@ The configuration file is actually a JSON file.
 * `DXSALE_PRESALE_ADDRESS`: If you are not sniping an DxLaunch token leave it blank or put the presale address here.
 * `MIN_BNB_IN_LP_TX`: Minimum BNB amount in liquidity transaction to snipe. It's a safety for not getting bogged by token's dev. traps.
 * `TOKEN_ADDRESS`: Token's address.
-* `BUY_EXTRA_GWEI`: Extra gas to append on `gasPrice` while buyying. This could make the transaction executed faster or it could get you miss the launch. Keep it `0` or `1` if you trust yourself.
+* `BUY_EXTRA_GWEI`: Extra gas to append on `gasPrice` while buying. This could make the transaction executed faster or it could get you miss the launch. Keep it `0` or `1` if you trust yourself.
 * `MAX_BUY_TRIES`: How many we will try if the buy transaction fails.
 * `STOP_IF_ALREADY_RELEASED`: `true` if we don't want to snipe the next liquidity transaction or `false` if you want to snipe.
 * `SELL_AT`: Sell multiplier. Program is going to sell the token when price reaches ex. 2x.
