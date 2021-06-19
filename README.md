@@ -65,16 +65,16 @@ The configuration file is actually a JSON file.
 * `COINS`: Your coin object list. You can add more coin object if you want.
 
 # Coin Object
-`IS_DXSALE_LAUNCH`: If you are sniping an DxLaunch token make this `true` or if you don't make it `false`.
-`DXSALE_PRESALE_ADDRESS`: If you are not sniping an DxLaunch token leave it blank or put the presale address here.
-`MIN_BNB_IN_LP_TX`: Minimum BNB amount in liquidity transaction to snipe. It's a safety for not getting bogged by token's dev. traps.
-`TOKEN_ADDRESS`: Token's address.
-`BUY_EXTRA_GWEI`: Extra gas to append on `gasPrice` while buyying. This could make the transaction executed faster or it could get you miss the launch. Keep it `0` or `1` if you trust yourself.
-`MAX_BUY_TRIES`: How many we will try if the buy transaction fails.
-`STOP_IF_ALREADY_RELEASED`: `true` if we don't want to snipe the next liquidity transaction or `false` if you want to snipe.
-`SELL_AT`: Sell multiplier. Program is going to sell the token when price reaches ex. 2x.
-`SLIPPAGE_IN_PERCENT`: Sell transaction slippage.
-`AUTO_APPROVE`: Approve the coin to the max. when selling.
+* `IS_DXSALE_LAUNCH`: If you are sniping an DxLaunch token make this `true` or if you don't make it `false`.
+* `DXSALE_PRESALE_ADDRESS`: If you are not sniping an DxLaunch token leave it blank or put the presale address here.
+* `MIN_BNB_IN_LP_TX`: Minimum BNB amount in liquidity transaction to snipe. It's a safety for not getting bogged by token's dev. traps.
+* `TOKEN_ADDRESS`: Token's address.
+* `BUY_EXTRA_GWEI`: Extra gas to append on `gasPrice` while buyying. This could make the transaction executed faster or it could get you miss the launch. Keep it `0` or `1` if you trust yourself.
+* `MAX_BUY_TRIES`: How many we will try if the buy transaction fails.
+* `STOP_IF_ALREADY_RELEASED`: `true` if we don't want to snipe the next liquidity transaction or `false` if you want to snipe.
+* `SELL_AT`: Sell multiplier. Program is going to sell the token when price reaches ex. 2x.
+* `SLIPPAGE_IN_PERCENT`: Sell transaction slippage.
+* `AUTO_APPROVE`: Approve the coin to the max. when selling.
 
 # Contact
-DISCORD: `cool guy#4125`, `DEV#5502`
+* DISCORD: `cool guy#4125`, `DEV#5502`
