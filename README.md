@@ -58,11 +58,11 @@ The configuration file is actually a JSON file.
 ```
 
 # Config Object
-`PRIVATE_KEY`: Your wallet's private key. There is no way that any developer get that and no-one would ask too.
-`WALLET_ADDRESS`: Your wallet's address.
-`PCS_ROUTER_ADDRESS`: PancakeSwap router address. It's "0x10ED43C718714eb63d5aA57B78B54704E256024E" on BSC mainnet.
-`BSC_PROVIDER_ADDRESS`: BSC Node address. You can use the public WSS address if you want. (wss://bsc-ws-node.nariox.org:443)
-`COINS`: Your coin object list. You can add more coin object if you want.
+* `PRIVATE_KEY`: Your wallet's private key. There is no way that any developer get that and no-one would ask too.
+* `WALLET_ADDRESS`: Your wallet's address.
+* `PCS_ROUTER_ADDRESS`: PancakeSwap router address. It's "0x10ED43C718714eb63d5aA57B78B54704E256024E" on BSC mainnet.
+* `BSC_PROVIDER_ADDRESS`: BSC Node address. You can use the public WSS address if you want. (wss://bsc-ws-node.nariox.org:443)
+* `COINS`: Your coin object list. You can add more coin object if you want.
 
 # Coin Object
 `IS_DXSALE_LAUNCH`: If you are sniping an DxLaunch token make this `true` or if you don't make it `false`.
