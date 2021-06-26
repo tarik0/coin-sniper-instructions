@@ -9,7 +9,7 @@ Coin Sniper filters out the pending transactions for the `PancakeSwap` and `DxSa
 
 # How Fast Is It ?
 At the worst case scenario your swapping transaction would be in the next block of the LP transaction and It will take `3 seconds` to execute your call.
-You could decrease that time with a private node to connect with WebSocket and also you can set extra gas to overrun the other transactions with `BUY_EXTRA_GWEI` in your configuration file. Second method is a bit risky because if you set a high value you could overrun the LP transaction and your gas money would go to trash but if you succeed your transaction can be in the same block as the LP transaction, so as summary it takes max. `3 seconds` to snipe.
+You could decrease that time with a private node to connect with WebSocket and also you can set extra gas to overrun the other transactions with `BUY_EXTRA_GWEI` in your configuration file. Second method is a bit risky because if you set a high value you could overrun the LP transaction and your gas money would go to trash but if you succeed your transaction can be in the same block as the LP transaction, so as summary it takes max. `3 seconds` to snipe using public node in standart environment.
 
 # Supported Transaction Types
 Not all transactions in all platforms are supported. Those are the supported platforms and transaction types.
