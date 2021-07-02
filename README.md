@@ -49,7 +49,6 @@ The configuration file is actually a JSON file.
             "STOP_IF_ALREADY_RELEASED": false,
 
             "SELL_AT": 2,
-            "SELL_GAS_GWEI": 5,
             "SLIPPAGE_IN_PERCENT": 15,
             "AUTO_APPROVE": true
         }
