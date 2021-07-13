@@ -44,6 +44,7 @@ The configuration file is actually a JSON file.
             "TOKEN_ADDRESS": "TOKEN'S ADDRESS",
 
             "BUY_EXTRA_GWEI": 1,
+            "BUY_DELAY_SEC": 0,
             "BUY_AMOUNT": 0.001,
             "MAX_BUY_TRIES": 3,
             "STOP_IF_ALREADY_RELEASED": false,
@@ -74,6 +75,7 @@ The configuration file is actually a JSON file.
 * `SELL_AT`: Sell multiplier. Program is going to sell the token when price reaches ex. 2x.
 * `SLIPPAGE_IN_PERCENT`: Sell transaction slippage.
 * `AUTO_APPROVE`: Approve the coin to the max. when selling.
+* `BUY_DELAY_SEC`: Delay in seconds. The delay is for some tokens that have bot detections.
 
 # Contact
 * DISCORD: `cool guy#4125`, `DEV#5502`
