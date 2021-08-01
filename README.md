@@ -29,53 +29,50 @@ You can generate your debug logs using `Tools->Save Debug Logs` and you can relo
 # How To Write A Config File
 The configuration file is actually a JSON file.
 
-```json
-{
-    "PRIVATE_KEY": "YOUR WALLET'S PRIVATE KEY",
-    "WALLET_ADDRESS": "YOUR WALLET'S ADDRESS.",
-    "PCS_ROUTER_ADDRESS" : "PANCAKESWAP ROUTER ADDRESS",
-    "BSC_PROVIDER_ADDRESS": "YOUR BSC NODE'S WEBSOCKET ADDRESS",
+```yml
+# Your wallet settings.
+Wallet Settings:
+  Private Key: ""
+  Wallet Address: ""
 
-    "COINS": [
-        {   
-            "IS_DXSALE_LAUNCH": false,
-            "DXSALE_PRESALE_ADDRESS": "DXSALE PRESALE ADDRESS",
-            "MIN_BNB_IN_LP_TX": 0.001,
-            "TOKEN_ADDRESS": "TOKEN'S ADDRESS",
+# Your PancakeSwap and node settings.
+Network Settings:
+  PancakeSwap Address: ""
+  Websocket Provider: ""
 
-            "BUY_EXTRA_GWEI": 1,
-            "BUY_DELAY_SEC": 0,
-            "BUY_AMOUNT": 0.001,
-            "MAX_BUY_TRIES": 3,
-            "STOP_IF_ALREADY_RELEASED": false,
+# The list of target coins that you want to snipe.
+Target Coins:
+  - Token Address: ""  # Enter the address of the token that you wan't to snipe here.
 
-            "SELL_AT": 2,
-            "SLIPPAGE_IN_PERCENT": 15,
-            "AUTO_APPROVE": true
-        }
-    ]
-}
+    # DxSale settings.
+    Is DxSale Launch: false  # If you are sniping an DxSale launch make that `true`.
+    DxSale Presale Address: ""  # If you are sniping an DxSale launch, enter the presale address here.
+
+    # Anti-bot settings.
+    Min. Liquidity Amount in BNB: 0.1  # The minimum liquidity amount to detect.
+    Buy Delay in Sec: 0  # The buy execution delay after detecting liquidity. (3 seconds =~ 1 block)
+    
+    # Other settings.
+    Stop If Tokens Are Already Released: false  # On `true` stops sniping if the tokens are already released.
+
+    # Approving settings.
+    Auto Approve: true  # On `true`, approves the token to the max. before sniping.
+    Approve Gas Price in GWEI: auto  # You can set your approve transaction's gas price here. (Auto is recommended.)
+    Approve Gas Limit: auto  # You can set the approve transaction's gas limit manually here. (Auto is recommended.)
+
+    # Buy settings.
+    Buy Amount in BNB: 0.1  # The amount of BNBs that you wan't to swap.
+    Max. Buy Retries: 3  # Amount of retries if buying it's fails. 
+    Buy Gas Price in GWEI: auto  # You can set the buy transaction's gas price manually here. (Auto is recommended.)
+    Buy Gas Limit: auto  # You can set the buy transaction's gas limit manually here. (Auto is recommended.)
+
+    # Sell settings.
+    Auto Sell: true  # On `true` after the token is sniped bot sells the tokens at a target price.
+    Sell Slippage: 15  # Slippage in percentage.
+    Sell At Multiplier: 5  # Target price multiplier to sell tokens at. (ex. this sells at 5X.)
+    Sell Gas Price in GWEI: auto  # You can set the sell transaction's gas price manually here. (Auto is recommended.)
+    Sell Gas Limit: auto  # You can set the sell transaction's gas limit manually here. (Auto is recommended.)
 ```
-
-# Config Object
-* `PRIVATE_KEY`: Your wallet's private key. There is no way that any developer get that and no-one would ask too.
-* `WALLET_ADDRESS`: Your wallet's address.
-* `PCS_ROUTER_ADDRESS`: PancakeSwap router address. It's "0x10ED43C718714eb63d5aA57B78B54704E256024E" on BSC mainnet.
-* `BSC_PROVIDER_ADDRESS`: BSC Node address. You can use the public WSS address if you want. (wss://bsc-ws-node.nariox.org:443)
-* `COINS`: Your coin object list. You can add more coin object if you want.
-
-# Coin Object
-* `IS_DXSALE_LAUNCH`: If you are sniping an DxLaunch token make this `true` or if you don't make it `false`.
-* `DXSALE_PRESALE_ADDRESS`: If you are not sniping an DxLaunch token leave it blank or put the presale address here.
-* `MIN_BNB_IN_LP_TX`: Minimum BNB amount in liquidity transaction to snipe. It's a safety for not getting bogged by token's dev. traps.
-* `TOKEN_ADDRESS`: Token's address.
-* `BUY_EXTRA_GWEI`: Extra gas to append on `gasPrice` while buying. This could make the transaction executed faster or it could get you miss the launch. Keep it `0` or `1` if you trust yourself.
-* `MAX_BUY_TRIES`: How many we will try if the buy transaction fails.
-* `STOP_IF_ALREADY_RELEASED`: `true` if we don't want to snipe the next liquidity transaction or `false` if you want to snipe.
-* `SELL_AT`: Sell multiplier. Program is going to sell the token when price reaches ex. 2x.
-* `SLIPPAGE_IN_PERCENT`: Sell transaction slippage.
-* `AUTO_APPROVE`: Approve the coin to the max. when selling.
-* `BUY_DELAY_SEC`: Delay in seconds. The delay is for some tokens that have bot detections.
 
 # Contact
 * DISCORD: `cool guy#4125`, `DEV#5502`
