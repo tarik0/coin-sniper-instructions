@@ -69,6 +69,7 @@ Target Coins:
     Auto Sell: true  # On `true` after the token is sniped bot sells the tokens at a target price.
     Sell Slippage: 15  # Slippage in percentage.
     Sell At Multiplier: 5  # Target price multiplier to sell tokens at. (ex. this sells at 5X.)
+    Spam Buy Till Success: false  # Spam buy requests till you buy after the liquidity is added. (This makes Max. Buy Retries infinite.)
     Sell Gas Price in GWEI: auto  # You can set the sell transaction's gas price manually here. (Auto is recommended.)
     Sell Gas Limit: auto  # You can set the sell transaction's gas limit manually here. (Auto is recommended.)
 ```
